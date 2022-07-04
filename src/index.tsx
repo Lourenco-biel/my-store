@@ -1,14 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import GlobalStyle from "./Style/globalStyles";
-import Home from "./Container/Home"
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import GlobalStyle from './Style/globalStyles';
+import Route from './routes'
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 root.render(
 <React.StrictMode>
-    <Home />
+    <Route />
     <GlobalStyle />
 </React.StrictMode>
 );

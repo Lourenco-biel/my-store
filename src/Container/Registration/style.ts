@@ -19,8 +19,6 @@ export const ContainerItens = styled.div`
     margin: 12px 100px ;
     padding-top: 45px;
     background: #c9c6c69e;   
-
-   
 `
 export const ContainerCadastro = styled.form`
     display: flex;

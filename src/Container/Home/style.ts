@@ -12,7 +12,6 @@ export const Container = styled.div`
 `
 
 export const ContainerItens = styled.form`
-    
     width: 400px;
     height: 87%;
     border-radius: 27px;
@@ -69,5 +68,4 @@ export const ContainerItens = styled.form`
         }
     }
    
-
 `
