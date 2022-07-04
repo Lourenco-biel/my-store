@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import * as C from './style';
+import { useHistory } from 'react-router-dom';
 
 function Home(){
   const [userName, setUserName] = useState<string>('')
+  const history = useHistory()
 
   const userRegister = (e: any) => {
     e.preventDefault()
@@ -10,6 +12,7 @@ function Home(){
       alert('Preencha o nome')
     }else{
       localStorage.setItem('userName', userName)
+      history.push('/products')
     }
     
   }
