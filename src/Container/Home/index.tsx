@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import * as C from './style';
 import { useHistory } from 'react-router-dom';
 
-function Home(){
+export function Home(){
   const [userName, setUserName] = useState<string>('')
   const history = useHistory()
 
@@ -14,11 +14,10 @@ function Home(){
       localStorage.setItem('userName', userName)
       history.push('/products')
     }
-    
   }
 
     return (
-        <C.Container>
+      <C.Container>
         <C.ContainerItens>
           <h1>Login</h1>
           <label ><i>Nome:</i>
@@ -26,8 +25,7 @@ function Home(){
             <button type='submit' onClick={(e) => userRegister(e)} >Ir para cadastro</button>
           </label>
         </C.ContainerItens>
-      </C.Container>
+        </C.Container>
     );
 }
 
-export default Home;
