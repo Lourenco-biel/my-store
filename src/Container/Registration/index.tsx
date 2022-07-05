@@ -1,10 +1,14 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import * as C from './style'
 
-function Registration(){
+export function Registration(){ 
+const [productExistent, setProductExistent] = useState<object>()
 const [productName, setProductName] = useState<string>('')
 const [productValue, setProductValue] = useState<number>(Number)
 const [productSKU, setProductSKU] = useState<number>(Number)
+const [productId, setProductId] = useState<string>('')
+
+
 
 
     return(
@@ -25,15 +29,11 @@ const [productSKU, setProductSKU] = useState<number>(Number)
             <label >SKU:<br />
               <input  type='number' onChange={(e)=> setProductSKU(parseFloat(e.target.value))} name='valor' placeholder='Valor do produto' required />
             </label>
-            <button type='submit'  className='cadastro'>Cadastrar</button>
-            <button name='Lista' className='cadastro'>Ir para lista </button>
+            <button type='submit'  className='registration'>Cadastrar</button>
+            <button name='Lista' className='goList'>Ir para lista </button>
           </C.ContainerCadastro>
-          <C.ContainerImg>
-        
-          </C.ContainerImg>
+      
         </C.ContainerItens>
       </C.Container>
     )
 }
-
-export default Registration;

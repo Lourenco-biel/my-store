@@ -2,9 +2,6 @@ import  styled  from 'styled-components';
 
 
 export const Container = styled.div`
-    background: rgb(8,23,135);
-    background: linear-gradient(90deg, rgba(8,23,135,0.9528186274509804) 25%, 
-    rgba(60,60,186,1) 55%, rgba(109,59,166,1) 92%);
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -13,11 +10,13 @@ export const Container = styled.div`
 export const ContainerItens = styled.div`
     display: flex;
     flex-direction: row-reverse;
-    width: 95%;
-    height:95%;
-    border-radius: 27px;
-    margin: 12px 100px ;
-    padding-top: 45px;
+
+    width: 80rem;
+    height:37rem;
+
+    border-radius: 2rem;
+    margin: 1rem 5rem ;
+    padding-top: 2.5rem;
     background: #c9c6c69e;   
 `
 export const ContainerCadastro = styled.form`
@@ -25,78 +24,54 @@ export const ContainerCadastro = styled.form`
     flex-direction: column; 
 
     h1{
-        width: 250px;
-        font-size: 35px;
-        line-height: 39px;
-        margin:0 30px 0 0;
+        width: 16rem;
+        line-height: 2.2rem;
         color: #d8d7d7;
         border-bottom: 1px solid rgb(8,23,135);
     }
 
-    h3{
-        margin:30px 30px 0 0 ;
-        color: black;
-        font-size: 16px;
-        font-weight: bold;
-
-        span{
-            margin-left:25px;
-        }
-    }
-
     label{
-        margin:30px 30px 0 0;
-        color: black;
-        font-size: 16px;
-        font-weight: bold;
+        margin:2rem 2rem 0 0;
     }
-
-
 
     input{
-        width: 300px;
-        height: 37px;
-        border-radius: 20px;
+        width: 18rem;
+        height: 2.4rem;
+        border-radius: 1.5rem;
         border: none;
         border-bottom: 3px solid rgb(8,23,135);
         box-shadow: 2px 4px 4px rgb(8,23,135);
-        padding-left:15px;
-        margin-top: 5px;
-        font-size: 16px;
-        font-weight: bold;
-        background: rgb(204, 204, 204);    
+        padding-left:1rem;
+        margin-top: 0.1rem;
     }
 
-    .cadastro,.Lista {
-        width: 310px;
-        height: 45px;
-        border-radius: 20px;
+    .registration,.goList {
+        color: #6cd0bf;
+        width: 18rem;
+        height: 2.5rem;
+
+        border-radius: 1.5rem;
         border: none;
         border-bottom: 3px solid rgb(8,23,135);
+
         box-shadow: 2px 4px 4px rgb(8,23,135);
         background: rgb(8,23,135);
-        color: #6cd0bf;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
+      
         &:hover{
-            opacity: 0.8;
+        filter:brightness(0.7)        
         }
         &:active{
-            opacity: 0.5;
+            filter:brightness(0.9)  
         }
    }
         
-   .cadastro{
-        margin-top: 9%;
+   .registration{
+        margin-top: 2.5rem;
    }
 
-   
-
-  
+   .goList{
+    margin-top: 1rem;
+   }
 
 `
 
-export const ContainerImg = styled.div`
-    
-`
