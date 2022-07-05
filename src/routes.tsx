@@ -1,8 +1,9 @@
 import React from "react";
 
 import { BrowserRouter, Route, Switch, Redirect, RouteProps } from "react-router-dom";
-import Registration from './Container/Registration'
-import Home from './Container/Home'
+import {Registration} from './Container/Registration'
+import {Home} from './Container/Home'
+import {ListProducts} from './Container/ListProducts'
 
 interface PrivateRouteProps extends RouteProps {
 
@@ -36,6 +37,7 @@ const myRoutes: React.FC = () => {
             <Switch>
                 <Route path="/" component={() => <Home/>}  exact />
                 <PrivateRoute path="/products" component={() => <Registration/>} />
+                <PrivateRoute path="/List" component={() => <ListProducts/>} />
             </Switch>
         </BrowserRouter>
     );

@@ -28,7 +28,7 @@ border-style, input, button{
     font-weight: 400;
 }
 
-h1 , h2, h3, h4, h5, h6, strong{
+h1 , h2, h3, h4, h5, h6, i{
     font-weight: 600;
 }
 

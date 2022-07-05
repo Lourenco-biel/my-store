@@ -1,3 +1,4 @@
+import { Header } from '../../Components/Header';
 import * as C from './style'
 
 export function ListProducts() {
@@ -8,6 +9,7 @@ export function ListProducts() {
         <>
             <C.Container>
                 <C.ContainerItens>
+                <Header/>
                     <h1>Lista</h1>
                     <div className='List'>
                         <table >
