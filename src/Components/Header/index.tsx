@@ -7,12 +7,9 @@ export function Header() {
     //getting information from localstore
     const userName = localStorage.getItem('userName')
 
-    const nextPageList = () =>{
-        history.push('/List')
-    
-      }
-      const nextPageregister = () =>{
-        history.push('/products')
+   
+      const nextPage = (e:string) =>{
+        history.push(e)
      
        }
       const logout = () =>{
@@ -25,8 +22,8 @@ export function Header() {
         <C.Container>
             <ul>
                 <li>Olá <i>{userName}</i></li>
-                <li><button onClick={()=> nextPageList()}>Home</button></li>
-                <li><button onClick={()=> nextPageregister()}>Cadastrar</button></li>
+                <li><button onClick={()=> nextPage('/List')}>Home</button></li>
+                <li><button onClick={()=> nextPage('/products')}>Cadastrar</button></li>
                 <li><button onClick={()=> logout()}> Sair</button></li>
             </ul>
 
