@@ -12,7 +12,7 @@ export function ListProducts() {
     const [allProductsList, setAllProductsList] = useState<Array<Product>>([])
     const [nonFavoriteProductsList, setNonFavoriteProductsList] = useState<Array<Product>>([])
     const [favoriteProductsList, setfavoriteProductsList] = useState<Array<Product>>([])
-    const [isNewTransactionModalOpen,setIsNewTransactionModalOpen]= useState(false)
+    const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false)
     const history = useHistory()
 
     //function that lists the products
@@ -79,13 +79,13 @@ export function ListProducts() {
         let favoriteIdsString = localStorage.getItem("favoriteIds")
         let favoriteProducts: Product[] = []
         let nonFavoriteProducts: Product[] = []
-        
+
         if (favoriteIdsString) {
             let favoriteIds: string[] = JSON.parse(favoriteIdsString)
-           
+
             for (let product of allProductsList) {
                 let found = favoriteIds.find(id => id === product.id)
-                
+
                 if (found) {
                     favoriteProducts.push(product)
                 } else {
@@ -99,20 +99,20 @@ export function ListProducts() {
         setNonFavoriteProductsList(nonFavoriteProducts)
     }
     //function that opens the modal
-    const handleOpenNewTransactionModal=()=>{
+    const handleOpenNewTransactionModal = () => {
         setIsNewTransactionModalOpen(true)
-       }
-       //function that closes the modal
-       const handleCloseNewTransactionModal=()=>{
+    }
+    //function that closes the modal
+    const handleCloseNewTransactionModal = () => {
         setIsNewTransactionModalOpen(false)
-       }
+    }
 
-     
+
     return (
         <>
             <C.Container>
                 <C.ContainerItens>
-                <Header onOpenNewTransactionModal={handleOpenNewTransactionModal}/>
+                    <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
                     <h1>Lista</h1>
                     <div className='List'>
                         <table >
@@ -148,7 +148,7 @@ export function ListProducts() {
                             </tbody>
                         </table>
                     </div>
-                   
+
                 </C.ContainerItens>
             </C.Container>
         </>
