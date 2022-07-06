@@ -23,7 +23,7 @@ export const ContainerItens = styled.div`
         word-break: break-word;
     }
 
-    table th,td {
+   th,td {
         text-align: start;
         padding: 0.8rem;
     }
@@ -42,14 +42,18 @@ export const ContainerItens = styled.div`
     }
 
     h1{
-        margin: 1.7rem 0 0 16rem;
+        margin: 1.7rem 0 0 13rem;
         width: 17rem;
         border-bottom: 1px solid black;
     }
 
     .List,.Favorite{
-    display: flex;
-    justify-content: center;
-  }
+        display: flex;
+        justify-content: center;
+        overflow-y: auto;
+        ::-webkit-scrollbar {
+        width: 0px;
+        }
+    }
 
 `
