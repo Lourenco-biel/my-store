@@ -6,16 +6,14 @@ export function Header() {
     const history = useHistory()
     //getting information from localstore
     const userName = localStorage.getItem('userName')
-
-   
+    //page navigation function
       const nextPage = (e:string) =>{
         history.push(e)
-     
        }
       const logout = () =>{
         //erasing the data
         localStorage.clear()
-        history.push('/')
+        nextPage('/')
        }
 
     return (
