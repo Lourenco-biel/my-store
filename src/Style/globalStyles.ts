@@ -34,6 +34,13 @@ h1 , h2, h3, h4, h5, h6, i{
 
 button{
     cursor: pointer;
+      
+    &:hover{
+        filter:brightness(0.7)        
+    }
+    &:active{
+        filter:brightness(0.9)  
+    }
 }
 
 input{
@@ -45,5 +52,64 @@ label{
     font-weight: 500;
 }
 
+.react-modal-overlay{
+    background: rgba(0, 0, 0, 0.5);
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+}
+.react-modal-content{
+    width:100%;
+    height:100%;
+    max-height: 578px;
+    max-width: 1190px;
+    background: rgb(204, 204, 204);
+    padding: 3rem;
+    position: relative;
+    border-radius: 2rem;
+    outline: none;
+
+    .ProductName, .name{
+        max-width: 13rem;
+        word-break: break-word;
+    }
+
+   th,td {
+        text-align: start;
+        padding: 0.8rem;
+    }
+
+    td {
+        background: #9898989e;  
+        border-radius: 0.7rem;
+        font-size: 1em;
+        color: #464646;
+    }
+    
+    h1{
+        margin: 1rem 0 1rem 0.3rem;
+        width: 17rem;
+        border-bottom: 1px solid black;
+    }
+
+    button{
+        background: none;
+        border: none;
+        margin: 0 0.4rem ;
+    }
+    .react-modal-close{
+        position: absolute;
+        right:2rem;
+        top:1.8rem;
+    }
+}
 
 `
