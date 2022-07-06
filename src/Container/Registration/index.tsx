@@ -1,13 +1,15 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import * as C from './style'
 import { useHistory } from 'react-router-dom';
 import { Product } from "../../Interface/Product";
-import { createProduct } from '../../Services/Products';
+import { createProduct, listProductById } from '../../Services/Products';
 
 export function Registration(){ 
+const [existentProduct, setExistentProduct] = useState<object>()
 const [productName, setProductName] = useState<string>('')
 const [productValue, setProductValue] = useState<number>(Number)
 const [productSKU, setProductSKU] = useState<number>(Number)
+const [productId, setProductId] = useState<string>('')
 const history = useHistory()
 
 
@@ -37,12 +39,30 @@ const productRegister = (e:any)=>{
     nextPage('List')
   }
 }
-
-
 //page navigation function
 const nextPage = (e:string) =>{
   history.push(e) 
  }  
+
+//get the id sent by the url and set it in the id variable
+ useEffect(() => {
+  let url = new URLSearchParams(window.location.search)
+  let productId = url.get('id')
+  if (productId) {
+    setProductId(productId)
+    getProductById(productId)
+  }
+}, [])
+ //list the product according to the id passed
+ const getProductById = async (id: string) => {
+  let product = await listProductById(id)
+  setExistentProduct(product)
+  setProductValue(parseFloat(product.value))
+  setProductName(product.name)
+  setProductSKU(parseFloat(product.SKU))
+}
+
+
 
     return(
         <C.Container>
@@ -51,15 +71,15 @@ const nextPage = (e:string) =>{
             <h1>Cadastre seu produto!</h1>
             
             <label >Nome do produto:<br />
-              <input  type='text' onChange={(e) => setProductName(e.target.value)} name='nome' placeholder='Escreva o nome do produto' required />
+              <input  type='text' onChange={(e) => setProductName(e.target.value)}  value={productName} name='nome' placeholder='Escreva o nome do produto' required />
             </label>
 
             <label >Valor do produto:<br />
-              <input  type='number' onChange={(e)=> setProductValue(parseFloat(e.target.value))} name='valor' placeholder='Valor do produto' required />
+              <input  type='number' onChange={(e)=> setProductValue(parseFloat(e.target.value))} value={productValue}  name='valor' placeholder='Valor do produto' required />
             </label>
 
             <label >SKU:<br />
-              <input  type='number' onChange={(e)=> setProductSKU(parseFloat(e.target.value))} name='valor' placeholder='Valor do produto' required />
+              <input  type='number' onChange={(e)=> setProductSKU(parseFloat(e.target.value))} value={productSKU} name='valor' placeholder='Valor do produto' required />
             </label>
             <button type='submit'  onClick={(e)=>productRegister(e)} className='registration'>Cadastrar</button>
             <button name='Lista' onClick={()=>nextPage('/List')} className='goList'>Ir para lista </button>
