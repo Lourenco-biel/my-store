@@ -28,32 +28,32 @@ export function Registration() {
           updatedBy: userName
         }
         updateProductById(product)
-        nextPage('List')
-      } else {
-        // create product
-        const products: Product = {
-          name: productName,
-          value: productValue,
-          SKU: productSKU,
-          createdAt: new Date().toLocaleString(),
-          updatedAt: new Date().toLocaleString(),
-          updatedBy: userName
-        }
-        //Check if they have been filled
-        if (productName === '') {
-          alert('Preencha o campo nome')
-        }
-        else if (productValue === 0) {
-          alert('Preencha o campo valor')
-        }
-        else if (productSKU === 0) {
-          alert('Preencha o campo SKU')
-        } else {
-          createProduct(products)
-          nextPage('List')
-        }
+        nextPage('/List')
+      } 
+    }
+    else {
+      // create product
+      const products: Product = {
+        name: productName,
+        value: productValue,
+        SKU: productSKU,
+        createdAt: new Date().toLocaleString(),
+        updatedAt: new Date().toLocaleString(),
+        updatedBy: userName
       }
-
+      //Check if they have been filled
+      if (productName === '') {
+        alert('Preencha o campo nome')
+      }
+      else if (productValue === 0) {
+        alert('Preencha o campo valor')
+      }
+      else if (productSKU === 0) {
+        alert('Preencha o campo SKU')
+      } else {
+        createProduct(products)
+        nextPage('/List')
+      }
     }
 
   }
@@ -79,8 +79,6 @@ export function Registration() {
     setProductName(product.name)
     setProductSKU(parseFloat(product.SKU))
   }
-
-
 
   return (
     <C.Container>
