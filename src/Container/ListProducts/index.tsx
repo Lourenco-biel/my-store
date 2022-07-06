@@ -18,11 +18,18 @@ export function ListProducts() {
     useEffect(()=>{
         getProducts()
     },[allProductsList])
-
     //function that deletes object
     const handleDelete = async(id:any)=>{
         try {
             await deleteItem(id)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    //"function that sends the product id to the registration page"
+    const productUpdate = async (id: any) => {
+        try {
+            history.push(`/products?id=${id}`)
         } catch (error) {
             console.log(error)
         }
@@ -58,7 +65,7 @@ export function ListProducts() {
                                     <td>{product.updatedAt}</td>
                                     <td>{product.updatedBy}</td>
                                     <td>
-                                        <button ><i className="fa-solid fa-pen-to-square"></i></button>
+                                        <button onClick={()=>productUpdate(product.id)}><i className="fa-solid fa-pen-to-square"></i></button>
                                         <button onClick={()=>handleDelete(product.id)}><i className="fa-solid fa-trash"></i></button>
                                         <button ><i className="fa-regular fa-star"></i></button>
                                     </td>
