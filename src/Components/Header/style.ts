@@ -9,14 +9,13 @@ export const Container = styled.nav`
     margin-right: 1.9rem ;
     margin-top: 1rem;
     }
-
     i{
         margin-left: 0.8rem;
-        
     }
     button{
         background: none;
         border: none;
+        outline: none;
     }
 
 `
