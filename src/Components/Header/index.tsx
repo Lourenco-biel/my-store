@@ -19,7 +19,6 @@ export function Header({onOpenNewTransactionModal}: HeaderProps) {
         nextPage('/')
        }
      
-
     return (
         <C.Container>
             <ul>

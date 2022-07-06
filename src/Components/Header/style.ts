@@ -17,5 +17,4 @@ export const Container = styled.nav`
         border: none;
         outline: none;
     }
-
 `

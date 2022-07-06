@@ -3,7 +3,7 @@ export interface Product{
     name:string,
     SKU: number,
     value: number,
-    updateAt: string,
-    updateBy: string,
-    createAt?: string
+    updatedAt: string,
+    updatedBy: string,
+    createdAt?: string
 }

@@ -1,12 +1,10 @@
 import  styled  from 'styled-components';
 
-
 export const Container = styled.div`
     width: 100vw;
     height: 100vh;
     display: flex;
 `
-
 export const ContainerItens = styled.div`
     display: flex;
     flex-direction: row-reverse;
@@ -18,6 +16,12 @@ export const ContainerItens = styled.div`
     margin: 1rem 5rem ;
     padding-top: 2.5rem;
     background: #c9c6c69e;   
+
+    img{
+        position: absolute; 
+        left:8rem;
+        top:2.5rem;
+    }
 `
 export const ContainerCadastro = styled.form`
     display: flex;
@@ -56,13 +60,6 @@ export const ContainerCadastro = styled.form`
 
         box-shadow: 2px 4px 4px rgb(8,23,135);
         background: rgb(8,23,135);
-      
-        &:hover{
-        filter:brightness(0.7)        
-        }
-        &:active{
-            filter:brightness(0.9)  
-        }
    }
         
    .registration{
@@ -72,6 +69,5 @@ export const ContainerCadastro = styled.form`
    .goList{
     margin-top: 1rem;
    }
-
 `
 

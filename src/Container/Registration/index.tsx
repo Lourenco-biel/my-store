@@ -3,7 +3,7 @@ import * as C from './style'
 import { useHistory } from 'react-router-dom';
 import { Product } from "../../Interface/Product";
 import { createProduct, listProductById, updateProductById } from '../../Services/Products';
-
+import Group from '../../Assets/Group.png'
 export function Registration() {
   const [existentProduct, setExistentProduct] = useState<object>()
   const [productName, setProductName] = useState<string>('')
@@ -55,13 +55,11 @@ export function Registration() {
         nextPage('/List')
       }
     }
-
   }
   //page navigation function
   const nextPage = (e: string) => {
     history.push(e)
   }
-
   //get the id sent by the url and set it in the id variable
   useEffect(() => {
     let url = new URLSearchParams(window.location.search)
@@ -108,7 +106,7 @@ export function Registration() {
           )}
           <button name='Lista' onClick={() => nextPage('/List')} className='goList'>Ir para lista </button>
         </C.ContainerCadastro>
-
+        <img src={Group} className='group' alt='Logo' />
       </C.ContainerItens>
     </C.Container>
   )

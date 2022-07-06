@@ -3,13 +3,13 @@ import { AxiosResponse } from "axios";
 import { Api } from "../Api/Axios";
 
 // creating product
-export const createProduct = async () =>{
-    let req: AxiosResponse = await Api.post('products')
+export const createProduct = async (product: Product) => {
+    let req = await Api.post("products", product)
     return req.data;
-}
+  }
 //listing product
-export const listProducst = async (product: object) =>{
-    let req: AxiosResponse = await Api.get('products', product)
+export const listProducst = async () =>{
+    let req: AxiosResponse = await Api.get('products')
     return req.data;
 }
 //Listing product by id
