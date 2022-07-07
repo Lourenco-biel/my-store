@@ -15,7 +15,7 @@ export function Header({onOpenNewTransactionModal}: HeaderProps) {
        }
       const logout = () =>{
         //erasing the data
-        localStorage.clear()
+        localStorage.removeItem('userName');
         nextPage('/')
        }
      

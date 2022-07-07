@@ -22,6 +22,18 @@ export const ContainerItens = styled.div`
         left:8rem;
         top:2.5rem;
     }
+
+    @media screen and (max-width: 1120px){
+        .group{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 440px){
+        width: 95%;
+        height:93%;
+        margin: 2em 1.5em 1em 1em;
+      
+    }
 `
 export const ContainerCadastro = styled.form`
     display: flex;
@@ -69,5 +81,6 @@ export const ContainerCadastro = styled.form`
    .goList{
     margin-top: 1rem;
    }
+
 `
 
