@@ -20,19 +20,21 @@ export const ContainerItens = styled.div`
     img{
         position: absolute; 
         left:8rem;
-        top:2.5rem;
+        top:7rem;
+        height: 60%;
+        width:40%;
     }
 
-    @media screen and (max-width: 1120px){
+    @media screen and (max-width: 780px){
         .group{
             display: none;
         }
+        margin: 5rem 5rem ;
     }
     @media screen and (max-width: 440px){
-        width: 95%;
-        height:93%;
-        margin: 2em 1.5em 1em 1em;
-      
+        width: 87%;
+        height: 93%;
+        margin: 2em 1.5em 1em 2em;
     }
 `
 export const ContainerCadastro = styled.form`
@@ -81,6 +83,24 @@ export const ContainerCadastro = styled.form`
    .goList{
     margin-top: 1rem;
    }
-
+   @media screen and (max-width: 440px){
+       h1{
+        margin: 2rem 6rem 6rem 0;
+       }
+       label{
+        font-size: 1.5rem;
+       }
+       input,.goList,.registration{
+        width: 21rem;
+        height: 2.9rem;
+       }
+       .goList{
+        margin-top: 2rem;
+       }
+       .registration{
+        margin-top: 4.5rem;
+       }
+       
+    }
 `
 

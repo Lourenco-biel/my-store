@@ -156,8 +156,8 @@ export function ListProducts() {
                         <button className='react-modal-close'
                             onClick={handleCloseNewTransactionModal}><i className="fa-solid fa-x"></i>
                         </button>
+                        <h1>Favoritos</h1>
                         <div className='Favorite'>
-                            <h1>Favoritos</h1>
                             <table>
                                 <thead>
                                     <tr>

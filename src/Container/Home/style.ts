@@ -67,51 +67,62 @@ export const ContainerItens = styled.form`
         box-shadow: 3px 3px 10px rgb(8,23,135);
     }
 
-    @media screen and (max-width: 450px){
-        width: 30rem;
-        height:40rem;
+    @media screen and (max-width: 447px){
+        width: 27rem;
+        height: 42rem;
+        margin: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
     
         input{
-            width: 18rem;
-            height: 2rem;
-            margin: 1.2rem 0 0 1rem;
+            width: 19rem;
+            height: 2.5rem;
+            margin: 1.2rem 0 0 2rem;
             padding: 7px;
         }
         i{
+            position: absolute;
             margin-left:2rem;
             padding: 0;
         }
         label{
-            margin-top: 60px;
+            margin-top: 5rem;
             margin-left:0;
             padding: 0;
         }
         button{
-            width: 18rem;
+            width: 20rem;
             height: 3rem;
             margin-top: 16%;
             margin-left: 7%;
         }
        
     }
+      @media screen and (max-width: 414px){
+        height: 55rem;
+        margin: 4.2rem 1rem;
 
-      @media screen and (max-width: 390px){
+        h1{
+            font-size: 3rem;
+            line-height: 3rem;
 
-        height:50rem;
-    
-        input{
-            width: 18rem;
-            height: 2rem;
-            margin: 1rem 0 0 0.7rem;
-            padding: 7px;
         }
-       
-        button{
-            width: 18rem;
-            height: 3rem;
-            margin-top: 3rem;
-            margin-left: 0.7rem;
+        .We{
+        width: 80%;
+        margin: 4rem 3rem 7rem 2rem;
         }
-       
-    }
+       button{
+        width: 22rem;
+        height: 3.5rem;
+       }
+       label{
+        margin-left: 5px;
+        font-size: 1.2rem;
+       }
+       input{
+        width: 22rem;
+        height: 2.8rem;
+        margin: 2.2rem 0 0 2rem;
+       }
+    } 
 `

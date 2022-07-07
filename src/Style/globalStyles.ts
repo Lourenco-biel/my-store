@@ -67,8 +67,8 @@ label{
 
 }
 .react-modal-content{
-    width:100%;
-    height:100%;
+    width:97%;
+    height:87%;
     max-height: 578px;
     max-width: 1190px;
     background: rgb(204, 204, 204);
@@ -110,6 +110,13 @@ label{
         right:2rem;
         top:1.8rem;
     }
+    .Favorite{
+        overflow-y: auto;
+        ::-webkit-scrollbar {
+        width: 0px;
+        }
+    }
+   
 }
 
 `

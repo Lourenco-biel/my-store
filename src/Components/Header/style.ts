@@ -17,4 +17,18 @@ export const Container = styled.nav`
         border: none;
         outline: none;
     }
+    @media screen and (max-width: 780px){
+        li{
+            margin-right: 0.9rem;
+        }
+        ul{
+            font-size: 12px;
+        }
+    }
+    @media screen and (max-width: 375px){
+        li{
+            margin-right: 0.5rem;
+        }
+    }
+
 `

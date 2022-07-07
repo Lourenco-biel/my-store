@@ -47,13 +47,29 @@ export const ContainerItens = styled.div`
         border-bottom: 1px solid black;
     }
 
-    .List,.Favorite{
+    .List{
         display: flex;
         justify-content: center;
         overflow-y: auto;
         ::-webkit-scrollbar {
         width: 0px;
         }
+    }
+    @media screen and (max-width: 780px){
+        margin: 4rem 1rem;
+        h1{
+           margin-left : 1rem;
+        }
+        th{
+            font-size: 12px;
+        }
+        .List{
+            justify-content: flex-start;
+        }
+    }
+    @media screen and (max-width: 375px){
+        margin: 1rem 1rem;
+        height:45rem;
     }
 
 `
