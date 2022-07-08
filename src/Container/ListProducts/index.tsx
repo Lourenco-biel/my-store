@@ -32,6 +32,8 @@ export function ListProducts() {
     const handleDelete = async (id: any) => {
         try {
             await deleteItem(id)
+            getProducts()
+
         } catch (error) {
             console.log(error)
         }
@@ -125,7 +127,6 @@ export function ListProducts() {
                                     <th>Criado em</th>
                                     <th>Atualizado em</th>
                                     <th>Editado por</th>
-
                                 </tr>
                             </thead>
                             <tbody>

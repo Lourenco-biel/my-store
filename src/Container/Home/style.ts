@@ -125,4 +125,27 @@ export const ContainerItens = styled.form`
         margin: 2.2rem 0 0 2rem;
        }
     } 
+    @media screen and (max-width: 376px){
+        height: 42rem;
+        margin: 3.2rem 1rem;
+        label{
+            margin-left: -7px;
+            margin-top: 2rem;
+            i{
+                margin-left: 3rem;
+            }
+       }
+       input,button{
+        width: 19rem;
+        height: 2.5rem;
+        margin: 2.2rem 0 0 3.2rem;
+       }
+       button{
+        font-size: 1.3rem;
+       }
+       input{
+        font-size: 1rem;
+       }
+      
+    }
 `

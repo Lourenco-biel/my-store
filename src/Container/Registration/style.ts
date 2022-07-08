@@ -30,11 +30,17 @@ export const ContainerItens = styled.div`
             display: none;
         }
         margin: 5rem 5rem ;
+        li{
+        margin-right: 0;
+       }
     }
     @media screen and (max-width: 440px){
         width: 87%;
         height: 93%;
         margin: 2em 1.5em 1em 2em;
+        li{
+        margin-right: 0;
+       }
     }
 `
 export const ContainerCadastro = styled.form`
@@ -100,7 +106,21 @@ export const ContainerCadastro = styled.form`
        .registration{
         margin-top: 4.5rem;
        }
+       li{
+        margin-right: 0;
+       }
        
+    }
+    @media screen and (max-width: 376px){
+       h1{
+        margin: 0 5rem 0 0 ;
+       }
+       input,.goList,.registration{
+        width: 19rem;
+       }
+       li{
+        margin-right: 0;
+       }
     }
 `
 
