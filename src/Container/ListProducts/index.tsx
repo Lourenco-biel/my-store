@@ -1,4 +1,4 @@
-import react, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Header } from '../../Components/Header';
 import { useHistory } from 'react-router-dom';
 import * as C from './style'
@@ -27,6 +27,7 @@ export function ListProducts() {
     //"shows the list updated every time we remove or add an object to the list (favorite or not)"
     useEffect(() => {
         parseFavoriteProducts()
+        /* eslint-disable */
     }, [allProductsList])
     //function that deletes object
     const handleDelete = async (id: any) => {
@@ -42,6 +43,7 @@ export function ListProducts() {
     const handleproductUpdate = async (id: any) => {
         try {
             history.push(`/products?id=${id}`)
+            getProducts()
         } catch (error) {
             console.log(error)
         }
