@@ -22,8 +22,6 @@ utilizei as ferramentas: React.js, typescript, Axios, mockApi, react-router-dom,
 
 <br>
 
-## 👨‍💻Link para acesso: 
-<a href="https://my-store-products.netlify.app/">Aperte aqui ⬅ </a>
 
 ## ☕ tecnologias utilizadas
 
