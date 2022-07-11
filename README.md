@@ -22,6 +22,9 @@ utilizei as ferramentas: React.js, typescript, Axios, mockApi, react-router-dom,
 
 <br>
 
+## 👨‍💻Link para acesso: 
+<a href="https://master--precious-scone-e3081c.netlify.app/">Aperte aqui ⬅ </a>
+
 
 ## ☕ tecnologias utilizadas
 
