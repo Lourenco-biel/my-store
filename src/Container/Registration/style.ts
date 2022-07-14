@@ -88,6 +88,13 @@ export const ContainerCadastro = styled.form`
 
    .goList{
     margin-top: 1rem;
+    i{
+        display: none;
+    }
+    &:hover i{
+            display: initial;
+            margin-left: 6px;
+        }
    }
    @media screen and (max-width: 440px){
        h1{

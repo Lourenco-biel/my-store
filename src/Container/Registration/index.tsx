@@ -104,7 +104,7 @@ export function Registration() {
           ) : (
             <button type='submit' onClick={(e) => (productRegister(e))} className='registration'>Cadastrar</button>
           )}
-          <button name='Lista' onClick={() => nextPage('/List')} className='goList'>Ir para lista </button>
+          <button name='Lista' onClick={() => nextPage('/List')} className='goList'>Ir para lista<i className="fa-solid fa-arrow-right-long"></i> </button>
         </C.ContainerCadastro>
         <img src={Group} className='group' alt='Logo' />
       </C.ContainerItens>
