@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import * as C from './style';
 import { useHistory } from 'react-router-dom';
 import Eco from '../../Assets/Eco.png'

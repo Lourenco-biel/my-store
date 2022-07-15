@@ -96,6 +96,7 @@ export const ContainerCadastro = styled.form`
             margin-left: 6px;
         }
    }
+   
    @media screen and (max-width: 440px){
        h1{
         margin: 2rem 6rem 6rem 0;

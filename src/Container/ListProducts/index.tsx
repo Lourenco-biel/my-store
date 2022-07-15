@@ -4,8 +4,7 @@ import { useHistory } from 'react-router-dom';
 import * as C from './style'
 import { Product } from '../../Interface/Product';
 import { deleteItem, listProducst as listProducst_ } from '../../Services/Products';
-import Modal from 'react-modal'
-Modal.setAppElement('#root')
+import { TransactionModal } from '../../Components/TransactionModal';
 
 
 export function ListProducts() {
@@ -13,6 +12,7 @@ export function ListProducts() {
     const [nonFavoriteProductsList, setNonFavoriteProductsList] = useState<Array<Product>>([])
     const [favoriteProductsList, setfavoriteProductsList] = useState<Array<Product>>([])
     const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false)
+
     const history = useHistory()
 
     //function that lists the products
@@ -102,6 +102,7 @@ export function ListProducts() {
         setfavoriteProductsList(favoriteProducts)
         setNonFavoriteProductsList(nonFavoriteProducts)
     }
+
     //function that opens the modal
     const handleOpenNewTransactionModal = () => {
         setIsNewTransactionModalOpen(true)
@@ -110,8 +111,6 @@ export function ListProducts() {
     const handleCloseNewTransactionModal = () => {
         setIsNewTransactionModalOpen(false)
     }
-
-
     return (
         <>
             <C.Container>
@@ -151,49 +150,16 @@ export function ListProducts() {
                             </tbody>
                         </table>
                     </div>
-                    <Modal isOpen={isNewTransactionModalOpen}
-                        onRequestClose={handleCloseNewTransactionModal}
-                        overlayClassName="react-modal-overlay"
-                        className="react-modal-content"
-                    >
-                        <button className='react-modal-close'
-                            onClick={handleCloseNewTransactionModal}><i className="fa-solid fa-x"></i>
-                        </button>
-                        <h1>Favoritos</h1>
-                        <div className='Favorite'>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Nome</th>
-                                        <th>SKU</th>
-                                        <th>Valor</th>
-                                        <th>Criado em</th>
-                                        <th>Atualizado em</th>
-                                        <th>Editado por</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {favoriteProductsList.map((product) => (
-                                        <tr key={product.id}>
-                                            <td>{product.id}</td>
-                                            <td className='ProductName'>{product.name}</td>
-                                            <td>{product.SKU}</td>
-                                            <td>{product.value}</td>
-                                            <td>{product.createdAt}</td>
-                                            <td>{product.updatedAt}</td>
-                                            <td>{product.updatedBy}</td>
-                                            <td>
-                                                <button onClick={() => handleproductUpdate(product.id)}><i className="fa-solid fa-pen-to-square"></i></button>
-                                                <button onClick={() => handleDelete(product.id)}><i className="fa-solid fa-trash"></i></button>
-                                                <button onClick={() => handlerUnCheckStar(product.id!)}><i className="fa-solid fa-star"></i></button>
-                                            </td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
-                    </Modal>
+                    <TransactionModal
+                        isOpen={isNewTransactionModalOpen}
+                        favoriteProductsList={favoriteProductsList}
+                        onRequestClose ={handleCloseNewTransactionModal}
+                        handleproductUpdate ={handleproductUpdate}
+                        handleDelete ={handleDelete}
+                        handlerUnCheckStar ={handlerUnCheckStar}
+                        
+
+                    />
                 </C.ContainerItens>
             </C.Container>
         </>
