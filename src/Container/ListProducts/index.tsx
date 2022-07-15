@@ -157,8 +157,6 @@ export function ListProducts() {
                         handleproductUpdate ={handleproductUpdate}
                         handleDelete ={handleDelete}
                         handlerUnCheckStar ={handlerUnCheckStar}
-                        
-
                     />
                 </C.ContainerItens>
             </C.Container>

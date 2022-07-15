@@ -1,20 +1,27 @@
 
 import Modal from 'react-modal'
-import {Product} from '../../Interface/Product'
+import { Product } from '../../Interface/Product'
 Modal.setAppElement('#root')
 
 
 interface ContainerModalProps {
-    favoriteProductsList : Product[],
+    favoriteProductsList: Product[],
     isOpen: boolean,
     onRequestClose: () => void,
-    handleproductUpdate: (id:any) => void,
-    handleDelete: (id:any) => void,
-    handlerUnCheckStar: (id:any) => void;
+    handleproductUpdate: (id: any) => void,
+    handleDelete: (id: any) => void,
+    handlerUnCheckStar: (id: any) => void;
 }
 
 
-export function TransactionModal ({isOpen, onRequestClose,handleproductUpdate,handleDelete,handlerUnCheckStar,favoriteProductsList}:ContainerModalProps) {
+export function TransactionModal({
+        isOpen,
+        favoriteProductsList,
+        onRequestClose,
+        handleproductUpdate,
+        handleDelete,
+        handlerUnCheckStar
+    }: ContainerModalProps) {
 
     return (
 
