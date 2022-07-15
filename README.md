@@ -8,7 +8,7 @@
 
 ## 💻 Sobre o Projeto
 
-Este projeto trata-se de uma aplicação de cadastro de produtos, onde há umna pagina de identificação, uma de cadastro de pedidos e uma de listagem de pedidos, inclui ainda um modal para os itens favoritos! 
+Este projeto trata-se de uma aplicação de cadastro de produtos, onde há uma pagina de identificação, uma de cadastro de pedidos e uma de listagem de pedidos, inclui ainda um modal para os itens favoritos! 
 
 - [X] Você pode excluir, editar e favoritar os produtos cadastrados! 
 - [X] Uma vez logado você pode acessar as paginas, caso não esteja logado não conseguira!
